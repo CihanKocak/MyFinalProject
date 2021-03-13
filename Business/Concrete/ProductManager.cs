@@ -70,9 +70,9 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId));
         }
-        public IDataResult<List<Product>> GetAllByCategoryId(int id)
+        public IDataResult<List<Product>> GetAllByCategoryId(int categoryId)
         {
-            return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.CategoryId == id));
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.CategoryId == categoryId));
         }
 
         public IDataResult<List<Product>> GetByUnitPrice(decimal min, decimal max)
